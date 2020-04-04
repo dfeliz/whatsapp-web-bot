@@ -168,8 +168,7 @@
 		}
 		ignoreLastMsg[title] = message;
 		
-		messageBox = document.querySelectorAll("[contenteditable='true']")[0];
-
+		messageBox = document.querySelector("#main > footer > div._3pkkz.V42si.copyable-area > div._1Plpp > div > div._2S1VP.copyable-text.selectable-text");
 		//add text into input field
 		messageBox.innerHTML = message.replace(/  /gm,'');
 
@@ -177,7 +176,6 @@
 		event = document.createEvent("UIEvents");
 		event.initUIEvent("input", true, true, window, 1);
 		messageBox.dispatchEvent(event);
-
 		//Click at Send Button
 		eventFire(document.querySelector('span[data-icon="send"]'), 'click');
 
